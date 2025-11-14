@@ -2,67 +2,129 @@
 
 
 /* Give the header element a background color */
-
+header {
+    background-color: #f0f0f0;
+}
 
 /* Center everything in the header and footer */
-
+header, footer {
+    text-align: center;
+}
 
 /* All text to Helvetica */
-
+* {
+    font-family: Helvetica, sans-serif;
+}
 
 /* All links default color is gray*/
-
+a {
+    color: gray;
+}
 
 /* All links on hover color red*/
+a:hover {
+    color: red;
+}
 
 
 /* All Links visited color black*/
-
+a:visited {
+    color: black;
+}
 
 /* Footer disclaimer text to be .5 em*/
-
+footer #disclaimer {
+    font-size: 0.5em;
+}
 
 /* Remove bullet points from header navigation links */
-
+header nav ul {
+    list-style: none;
+}
 
 /* All Post's Comment Links Italicized, Orange and Remove the Underline */
-
+/* .post-comments a {
+    font-style: italic;
+    color: orange;
+    text-decoration: none;
+} */
+ a[href*="#comments"] {
+    font-style: italic;
+    color: orange;
+    text-decoration: none;
+}
 
 /* All Post's Comment Links Show Underline on Hover */
-
+a[href*="#comments"]:hover {
+    text-decoration: underline;
+}
 
 /* All Post's Author's Links Bold and Blue, with no Underline */
-
+a[href*="author"] {
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+}
+/* ?? */
 
 /* Article Paragraph Text should have line height of 200% */
+article p {
+    line-height: 200%;
+}
 
 
 /* The First Letter of each Article be 2em */
+article::first-letter {
+    font-size: 2em;
+}
 
 
 /* The First Image in every Article should have Rounded Corners*/
-
+article img:first-of-type {
+    border-radius: 10px;
+}
 
 /* The First Top Cat Section (check the bottom of the HTML file) should have a Golden Background */
-
+.top-cat:nth-of-type(1) {
+    background-color: gold;
+}
+/* ?? */
 
 /* The 2nd Top Cat Section Should have a Silver/gray Background */
+.top-cat:nth-of-type(2) {
+    background-color: silver;
+}
+/* ?? */
 
 /* The 3rd-Most Top Cat Should have a Bronze/brown Background
    Note: the HTML for this one is a little odd! This is intentional! */
 
 /* Every other Article's Post-Content Background Color to a Light Grey */
-
+article p {
+      background-color: #f5f5f5;
+}
 
 /* All Top Kitten's Profile Photos Rounded */
-
-
+.top-kitten img {
+    border-radius: 50%;
+}
 /* ** BONUS ** */
 
 /* Add a cat emoji before a Cat's Name (in the heading content)*/
-
+.top-kitten h2::before {
+    content: "🐱 ";
+}
+/* ?? */
 
 /* Top-most Top Cat has a trophy emoji before name */
-
+.top-cat:nth-of-type(1) h2::before {
+    content: "🏆 ";
+}
+/* ?? */
 
 /* Use Google Fonts to change h1 & h2 fonts to Roboto Slab */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+}
+/* ?? */
